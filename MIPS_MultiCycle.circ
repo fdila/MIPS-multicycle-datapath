@@ -166,14 +166,6 @@ end TCL_Generic;
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
-    <comp lib="2" loc="(1090,830)" name="Multiplexer">
-      <a name="enable" val="false"/>
-      <a name="width" val="32"/>
-    </comp>
-    <comp lib="2" loc="(1090,880)" name="Multiplexer">
-      <a name="enable" val="false"/>
-      <a name="width" val="32"/>
-    </comp>
     <comp lib="2" loc="(1480,800)" name="Multiplexer">
       <a name="enable" val="false"/>
       <a name="width" val="32"/>
@@ -193,6 +185,14 @@ end TCL_Generic;
       <a name="width" val="32"/>
     </comp>
     <comp lib="2" loc="(490,670)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(950,810)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(950,860)" name="Multiplexer">
       <a name="enable" val="false"/>
       <a name="width" val="32"/>
     </comp>
@@ -238,7 +238,7 @@ end TCL_Generic;
     </comp>
     <comp loc="(1000,270)" name="ControlUnit"/>
     <comp loc="(1120,1070)" name="ShiftL2"/>
-    <comp loc="(1180,830)" name="Registers">
+    <comp loc="(1250,800)" name="RegisterFile">
       <a name="label" val="RegFile"/>
     </comp>
     <comp loc="(1260,620)" name="ShiftL2"/>
@@ -280,14 +280,185 @@ end TCL_Generic;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
   </circuit>
-  <circuit name="Registers">
+  <circuit name="RegisterFile">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Registers"/>
+    <a name="circuit" val="RegisterFile"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(1140,690)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="WriteRegister"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(1140,780)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="WriteData"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(1180,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="WriteEnable"/>
+    </comp>
+    <comp lib="0" loc="(1970,1220)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="ReadRegister2"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(1980,560)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="ReadRegister1"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(2300,310)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="RegisterA"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(2300,930)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="RegisterB"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="1" loc="(1490,150)" name="AND Gate"/>
+    <comp lib="2" loc="(1140,580)" name="Decoder">
+      <a name="select" val="5"/>
+    </comp>
+    <comp lib="2" loc="(2030,930)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="select" val="5"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="2" loc="(2040,310)" name="Multiplexer">
+      <a name="enable" val="false"/>
+      <a name="select" val="5"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(1540,1090)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,110)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,1200)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,1310)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,1420)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,1530)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,1640)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,1750)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,1860)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,1970)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,2080)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,210)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,2190)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,2300)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,2410)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,2520)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,2630)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,2740)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,2850)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,2960)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,3070)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,310)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,3180)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,3290)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,3400)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,3510)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,3620)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,420)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,530)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,640)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,750)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,860)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(1540,980)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(1140,580)" to="(1140,690)"/>
+    <wire from="(1160,260)" to="(1390,260)"/>
+    <wire from="(1180,190)" to="(1230,190)"/>
+    <wire from="(1230,130)" to="(1230,190)"/>
+    <wire from="(1230,130)" to="(1440,130)"/>
+    <wire from="(1390,170)" to="(1390,260)"/>
+    <wire from="(1390,170)" to="(1440,170)"/>
+    <wire from="(1490,150)" to="(1530,150)"/>
+    <wire from="(1530,150)" to="(1530,160)"/>
+    <wire from="(1530,160)" to="(1540,160)"/>
+    <wire from="(1970,1220)" to="(2010,1220)"/>
+    <wire from="(1980,560)" to="(2020,560)"/>
+    <wire from="(2000,150)" to="(2000,160)"/>
+    <wire from="(2010,1090)" to="(2010,1220)"/>
+    <wire from="(2020,470)" to="(2020,560)"/>
+    <wire from="(2030,930)" to="(2300,930)"/>
+    <wire from="(2040,310)" to="(2300,310)"/>
   </circuit>
   <circuit name="Memory">
     <a name="appearance" val="logisim_evolution"/>
