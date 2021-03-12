@@ -237,15 +237,15 @@ end TCL_Generic;
       <a name="width" val="32"/>
     </comp>
     <comp loc="(1000,270)" name="ControlUnit"/>
-    <comp loc="(1120,1070)" name="ShiftL2"/>
+    <comp loc="(1120,1140)" name="ShiftL2_32bit"/>
     <comp loc="(1250,800)" name="RegisterFile">
       <a name="label" val="RegFile"/>
     </comp>
-    <comp loc="(1260,620)" name="ShiftL2"/>
+    <comp loc="(1360,580)" name="ShiftLeft26BitTo28"/>
     <comp loc="(1520,830)" name="ALU"/>
     <comp loc="(1660,1130)" name="ALU_Control"/>
     <comp loc="(410,750)" name="Memory"/>
-    <comp loc="(990,1070)" name="SignExtend"/>
+    <comp loc="(840,1140)" name="SignExtend"/>
     <wire from="(1000,290)" to="(1130,290)"/>
     <wire from="(1130,240)" to="(1130,290)"/>
     <wire from="(200,240)" to="(1130,240)"/>
@@ -256,15 +256,6 @@ end TCL_Generic;
   <circuit name="ALU">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="ALU"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
-    <a name="clabel" val=""/>
-    <a name="clabelfont" val="SansSerif bold 16"/>
-    <a name="clabelup" val="east"/>
-  </circuit>
-  <circuit name="Control">
-    <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Control"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
@@ -551,14 +542,102 @@ end TCL_Generic;
     <wire from="(420,370)" to="(490,370)"/>
     <wire from="(510,50)" to="(570,50)"/>
   </circuit>
-  <circuit name="ShiftL2">
+  <circuit name="ShiftL2_32bit">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="ShiftL2"/>
+    <a name="circuit" val="ShiftL2_32bit"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(190,100)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="In32"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(230,120)" name="Constant">
+      <a name="value" val="0x2"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(490,110)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="OutShift32"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="3" loc="(390,110)" name="Shifter">
+      <a name="width" val="32"/>
+    </comp>
+    <wire from="(190,100)" to="(350,100)"/>
+    <wire from="(230,120)" to="(350,120)"/>
+    <wire from="(390,110)" to="(490,110)"/>
+  </circuit>
+  <circuit name="ShiftLeft26BitTo28">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="ShiftLeft26BitTo28"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="circuitvhdlpath" val=""/>
+    <a name="clabel" val=""/>
+    <a name="clabelfont" val="SansSerif bold 16"/>
+    <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(180,410)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="In26"/>
+      <a name="width" val="26"/>
+    </comp>
+    <comp lib="0" loc="(200,410)" name="Splitter">
+      <a name="fanout" val="26"/>
+      <a name="incoming" val="26"/>
+    </comp>
+    <comp lib="0" loc="(260,110)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(340,120)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="28"/>
+      <a name="incoming" val="28"/>
+    </comp>
+    <comp lib="0" loc="(390,120)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="Out28"/>
+      <a name="output" val="true"/>
+      <a name="width" val="28"/>
+    </comp>
+    <wire from="(180,410)" to="(200,410)"/>
+    <wire from="(220,150)" to="(320,150)"/>
+    <wire from="(220,160)" to="(320,160)"/>
+    <wire from="(220,170)" to="(320,170)"/>
+    <wire from="(220,180)" to="(320,180)"/>
+    <wire from="(220,190)" to="(320,190)"/>
+    <wire from="(220,200)" to="(320,200)"/>
+    <wire from="(220,210)" to="(320,210)"/>
+    <wire from="(220,220)" to="(320,220)"/>
+    <wire from="(220,230)" to="(320,230)"/>
+    <wire from="(220,240)" to="(320,240)"/>
+    <wire from="(220,250)" to="(320,250)"/>
+    <wire from="(220,260)" to="(320,260)"/>
+    <wire from="(220,270)" to="(320,270)"/>
+    <wire from="(220,280)" to="(320,280)"/>
+    <wire from="(220,290)" to="(320,290)"/>
+    <wire from="(220,300)" to="(320,300)"/>
+    <wire from="(220,310)" to="(320,310)"/>
+    <wire from="(220,320)" to="(320,320)"/>
+    <wire from="(220,330)" to="(320,330)"/>
+    <wire from="(220,340)" to="(320,340)"/>
+    <wire from="(220,350)" to="(320,350)"/>
+    <wire from="(220,360)" to="(320,360)"/>
+    <wire from="(220,370)" to="(320,370)"/>
+    <wire from="(220,380)" to="(320,380)"/>
+    <wire from="(220,390)" to="(320,390)"/>
+    <wire from="(220,400)" to="(320,400)"/>
+    <wire from="(260,110)" to="(310,110)"/>
+    <wire from="(310,110)" to="(310,130)"/>
+    <wire from="(310,130)" to="(310,140)"/>
+    <wire from="(310,130)" to="(320,130)"/>
+    <wire from="(310,140)" to="(320,140)"/>
+    <wire from="(340,120)" to="(390,120)"/>
   </circuit>
   <circuit name="ControlUnit">
     <a name="appearance" val="custom"/>
