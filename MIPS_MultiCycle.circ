@@ -51,6 +51,7 @@
     </tool>
     <tool name="RAM">
       <a name="appearance" val="logisim_evolution"/>
+      <a name="enables" val="line"/>
     </tool>
     <tool name="ROM">
       <a name="appearance" val="logisim_evolution"/>
@@ -184,7 +185,7 @@ end TCL_Generic;
       <a name="enable" val="false"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="2" loc="(490,670)" name="Multiplexer">
+    <comp lib="2" loc="(420,670)" name="Multiplexer">
       <a name="enable" val="false"/>
       <a name="width" val="32"/>
     </comp>
@@ -226,32 +227,32 @@ end TCL_Generic;
       <a name="label" val="PC"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(670,750)" name="Register">
+    <comp lib="4" loc="(740,760)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="InstructionRegister"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="4" loc="(670,920)" name="Register">
+    <comp lib="4" loc="(740,900)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="MemoryDataRegister"/>
       <a name="width" val="32"/>
     </comp>
     <comp loc="(1000,270)" name="ControlUnit"/>
-    <comp loc="(1120,1140)" name="ShiftL2_32bit"/>
+    <comp loc="(1100,1140)" name="ShiftL2_32bit"/>
     <comp loc="(1250,800)" name="RegisterFile">
       <a name="label" val="RegFile"/>
     </comp>
     <comp loc="(1360,580)" name="ShiftLeft26BitTo28"/>
     <comp loc="(1520,830)" name="ALU"/>
     <comp loc="(1660,1130)" name="ALU_Control"/>
-    <comp loc="(410,750)" name="Memory"/>
+    <comp loc="(670,770)" name="Memory"/>
     <comp loc="(840,1140)" name="SignExtend"/>
     <wire from="(1000,290)" to="(1130,290)"/>
     <wire from="(1130,240)" to="(1130,290)"/>
     <wire from="(200,240)" to="(1130,240)"/>
     <wire from="(200,240)" to="(200,680)"/>
     <wire from="(200,680)" to="(260,680)"/>
-    <wire from="(320,660)" to="(460,660)"/>
+    <wire from="(320,660)" to="(390,660)"/>
   </circuit>
   <circuit name="ALU">
     <a name="appearance" val="logisim_evolution"/>
@@ -459,6 +460,69 @@ end TCL_Generic;
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
+    <comp lib="0" loc="(1010,410)" name="Clock"/>
+    <comp lib="0" loc="(1040,370)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="MemRead"/>
+    </comp>
+    <comp lib="0" loc="(1170,350)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="MemData"/>
+      <a name="output" val="true"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(330,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="MemAddr"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(410,330)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(520,390)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="MemWriteData"/>
+      <a name="radix" val="16"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="0" loc="(600,330)" name="Clock"/>
+    <comp lib="0" loc="(610,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="MemWrite"/>
+    </comp>
+    <comp lib="2" loc="(450,270)" name="BitSelector">
+      <a name="group" val="24"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(1050,320)" name="Register">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="width" val="32"/>
+    </comp>
+    <comp lib="4" loc="(660,260)" name="RAM">
+      <a name="addrWidth" val="24"/>
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="dataWidth" val="32"/>
+      <a name="enables" val="line"/>
+    </comp>
+    <wire from="(1010,410)" to="(1020,410)"/>
+    <wire from="(1020,390)" to="(1020,410)"/>
+    <wire from="(1020,390)" to="(1050,390)"/>
+    <wire from="(1040,370)" to="(1050,370)"/>
+    <wire from="(1110,350)" to="(1170,350)"/>
+    <wire from="(330,270)" to="(420,270)"/>
+    <wire from="(410,330)" to="(440,330)"/>
+    <wire from="(440,280)" to="(440,330)"/>
+    <wire from="(450,270)" to="(660,270)"/>
+    <wire from="(520,390)" to="(610,390)"/>
+    <wire from="(600,330)" to="(660,330)"/>
+    <wire from="(610,300)" to="(620,300)"/>
+    <wire from="(610,350)" to="(610,390)"/>
+    <wire from="(610,350)" to="(660,350)"/>
+    <wire from="(620,300)" to="(620,310)"/>
+    <wire from="(620,310)" to="(660,310)"/>
+    <wire from="(900,350)" to="(1050,350)"/>
   </circuit>
   <circuit name="SignExtend">
     <a name="appearance" val="logisim_evolution"/>
