@@ -232,10 +232,6 @@ end TCL_Generic;
       <a name="label" val="ALUOp"/>
       <a name="width" val="2"/>
     </comp>
-    <comp lib="0" loc="(1590,640)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="32"/>
-    </comp>
     <comp lib="0" loc="(160,1020)" name="Tunnel">
       <a name="facing" val="north"/>
       <a name="label" val="Instruction25_0"/>
@@ -690,8 +686,7 @@ end TCL_Generic;
     <wire from="(1530,1640)" to="(1530,1800)"/>
     <wire from="(1530,1640)" to="(1570,1640)"/>
     <wire from="(1530,1800)" to="(1820,1800)"/>
-    <wire from="(1590,640)" to="(1620,640)"/>
-    <wire from="(1620,640)" to="(1620,760)"/>
+    <wire from="(1540,760)" to="(1620,760)"/>
     <wire from="(1640,1010)" to="(1780,1010)"/>
     <wire from="(1640,1030)" to="(1770,1030)"/>
     <wire from="(1640,1050)" to="(1760,1050)"/>
