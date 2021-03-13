@@ -1,5 +1,5 @@
 # Truth table
-# Exported on Fri Mar 12 11:40:36 CET 2021
+# Exported on Sat Mar 13 12:00:32 CET 2021
 
 # Hints and Notes on Formatting:
 # * You can edit this file then import it back into Logisim!
@@ -17,11 +17,11 @@ ALUOp[1..0] Funct[5..0] | ALUFunct[1..0]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     00        000000    |       00      
     00        -----1    |       00      
-    00        ----10    |       --      
-    00        ---100    |       --      
-    00        --1000    |       --      
-    00        -10000    |       --      
-    00        100000    |       --      
+    00        ----10    |       00      
+    00        ---100    |       00      
+    00        --1000    |       00      
+    00        -10000    |       00      
+    00        100000    |       00      
     01        ------    |       01      
     10        0-----    |       --      
     10        100000    |       00      
