@@ -16,7 +16,7 @@ Store the word from register rt at address.
 
 ---
 
-JUMP
+JUMP:
 
 op     target
 000010 00000000000000000000000000
@@ -25,7 +25,7 @@ Unconditionally jump to the instruction at target.
 
 ---
 
-BEQ
+BEQ:
 
 op     rs    rt    label
 000100 00000 00000 0000000000000000
@@ -35,7 +35,7 @@ register rs equals rt.
 
 ---
 
-ADD
+ADD:
 
 op     rs    rt    rd    zero  funct
 000000 00000 00000 00000 00000 100000
@@ -44,7 +44,7 @@ Put the sum of registers rs and rt into register rd.
 
 ---
 
-AND
+AND:
 
 op     rs    rt    rd    zero  funct
 000000 00000 00000 00000 00000 100100
@@ -53,14 +53,13 @@ Put the logical AND of registers rs and rt into register rd.
 
 ---
 
-SUB
+SUB:
 
 op     rs    rt    rd    zero  funct
 000000 00000 00000 00000 00000 100010
 
 ---
 
-SLT
-
+SLT:
 op     rs    rt    rd    zero  funct
 000000 00000 00000 00000 00000 101010
