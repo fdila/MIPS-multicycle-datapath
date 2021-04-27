@@ -1,4 +1,4 @@
-## ## Hex files in this folder
+## Hex files in this folder
 
 - `j.hex`: Jumps to 0x20 (= 0x8<<2).
 
