@@ -1,0 +1,11 @@
+nuovo stato dopo 0001 -> 1100
+nuovo stato dopo 1100 -> 1101
+
+jal op = 000011
+
+//jal 00000000000000000001111100
+000011 00000000000000000001111100
+
+//hex da caricare in memoria
+C00007C
+
