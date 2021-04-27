@@ -1,0 +1,13 @@
+//Put any number in memory at 0xC address
+//Put any number in memory at 0x10 address
+
+
+//Load in $0 the number stored at 0xC
+8C00000C
+
+//Load in $1 the number stored at 0x10
+8C210010
+
+//SUB $0 $1 and store the result in $2
+11022
+
