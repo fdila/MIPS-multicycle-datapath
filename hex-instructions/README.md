@@ -1,3 +1,23 @@
+## ## Hex files in this folder
+
+- `j.hex`: jumps to 0x8 << 2
+
+- `lw.hex`
+
+- `sw.hex`
+
+- `add.hex`
+
+- `beq.hex`
+
+
+
+
+
+
+
+## Instructions format
+
 LOAD WORD:
 
 op     rs    rt    offset
