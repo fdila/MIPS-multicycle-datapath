@@ -1,12 +1,12 @@
 ## ## Hex files in this folder
 
-- `j.hex`: jumps to 0x20 (= 0x8<<2).
+- `j.hex`: Jumps to 0x20 (= 0x8<<2).
 
-- `lw.hex`: the number 0xF is stored in memory at 0xC. Load the number stored in 0xC in \$8.
+- `lw.hex`: The number 0xF is stored in memory at 0xC. Load the number stored in 0xC in \$8.
 
-- `sw.hex`: the number 0xF is stored in memory at 0xC. Load the number stored in 0xC in \$8. Store \$8 register in memory at 0x12
+- `sw.hex`: The number 0xF is stored in memory at 0xC. Load the number stored in 0xC in \$8. Store \$8 register in memory at 0x12.
 
-- `add.hex`:
+- `add.hex`: The number 0xF is stored in memory at 0xC. The number 0x4 is stored in memory at 0x10. Load the two numbers from memory in \$8 and \$9. Add the two registers and store the result in \$10.
 
 - `beq.hex`:
 
