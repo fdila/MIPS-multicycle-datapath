@@ -1,8 +1,8 @@
 ## ## Hex files in this folder
 
-- `j.hex`: jumps to 0x20 (= 0x8<<2)
+- `j.hex`: jumps to 0x20 (= 0x8<<2).
 
-- `lw.hex`
+- `lw.hex`: number 0xF is stored at 0xC. Load the number stored in 0xC in $8.
 
 - `sw.hex`
 
