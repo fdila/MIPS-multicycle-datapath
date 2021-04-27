@@ -1,7 +1,0 @@
-//Put any number in memory at 0xC address
-
-//Load in $0 the number stored at 0xC
-8C00000C
-
-//Store the content of $0 at 0x10
-AC200010

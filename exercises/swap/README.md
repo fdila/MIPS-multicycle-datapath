@@ -1,19 +1,27 @@
-# MIPS-multicycle-datapath
+Istruzione che scambia il contenuto di due registri
 
-MIPS multicycle datapath made in logisim evolution.
+swap op (ipotetico) = 001001
 
-Datapath and FSM are taken from "Computer Organization and Design: The Hardware/Software Interface, Mips Edition", 3rd edition.
+Formato istruzione:
+001001 00000 00000 00000 00000000000
+op     rs    rt    rd    -----
 
-This datapath implements:
+rs = rd
 
-- R-Type instructions (ADD, AND, SUB, SLT)
+nuovo stato dopo 0001 -> 1100
+nuovo stato dopo 1100 -> 1101
 
-- Load Word
+Scambia il contenuto di $0 e $1
+001001 00000 00001 00000 00000000000
 
-- Store Word
+//Put any number in memory at 0xC address
+//Put any number in memory at 0x10 address
 
-- Jump
+//Load in $0 the number stored at 0xC
+8C00000C
 
-- Branch Equal
+//Load in $1 the number stored at 0x10
+8C210010
 
-- Exceptions for ADD overflow and unrecognized OP code
+//Swap $0 $1
+24010000

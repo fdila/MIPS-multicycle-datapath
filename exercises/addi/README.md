@@ -1,19 +1,7 @@
-# MIPS-multicycle-datapath
+nuovo stato dopo 0001 -> 1100
+nuovo stato dopo 1100 -> 1101
 
-MIPS multicycle datapath made in logisim evolution.
+addi op = 001000
 
-Datapath and FSM are taken from "Computer Organization and Design: The Hardware/Software Interface, Mips Edition", 3rd edition.
-
-This datapath implements:
-
-- R-Type instructions (ADD, AND, SUB, SLT)
-
-- Load Word
-
-- Store Word
-
-- Jump
-
-- Branch Equal
-
-- Exceptions for ADD overflow and unrecognized OP code
+//Add 0b1111111111111111 to $0 and save the result in $1
+2001FFFF

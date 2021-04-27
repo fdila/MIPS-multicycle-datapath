@@ -1,19 +1,10 @@
-# MIPS-multicycle-datapath
+nuovo stato dopo 0001 -> 1100
 
-MIPS multicycle datapath made in logisim evolution.
+jrim op (ipotetico) = 001001
 
-Datapath and FSM are taken from "Computer Organization and Design: The Hardware/Software Interface, Mips Edition", 3rd edition.
+//salta a $0 + 0b0001000000000000
 
-This datapath implements:
+001001 00000 00000 0001000000000000
 
-- R-Type instructions (ADD, AND, SUB, SLT)
-
-- Load Word
-
-- Store Word
-
-- Jump
-
-- Branch Equal
-
-- Exceptions for ADD overflow and unrecognized OP code
+hex:
+24001000

@@ -1,19 +1,29 @@
-# MIPS-multicycle-datapath
+Istruzione che somma 3 registri e mette il contenuto in un quarto registro
 
-MIPS multicycle datapath made in logisim evolution.
+add3 op (ipotetico) = 001010
 
-Datapath and FSM are taken from "Computer Organization and Design: The Hardware/Software Interface, Mips Edition", 3rd edition.
+Formato istruzione:
+001001 00000 00000 00000 000000 00000
+op     rs    rt    rd    ------ rx
 
-This datapath implements:
+nuovo stato dopo 0001 -> 1100
+nuovo stato dopo 1100 -> 1101
+nuovo stato dopo 1101 -> 0111
 
-- R-Type instructions (ADD, AND, SUB, SLT)
+Somma $1, $2, $3 e salva in $4
+001001 00001 00010 00100 000000 00011
 
-- Load Word
+//Put any number in memory at 0xC address
+//Put any number in memory at 0x10 address
 
-- Store Word
+//Load in $1 the number stored at 0x10
+8C010010
 
-- Jump
+//Load in $2 the number stored at 0x14
+8C020014
 
-- Branch Equal
+//Load in $3 the number stored at 0x14
+8C030014
 
-- Exceptions for ADD overflow and unrecognized OP code
+//Add3
+24222003
