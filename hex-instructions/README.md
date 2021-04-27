@@ -2,13 +2,13 @@
 
 - `j.hex`: jumps to 0x20 (= 0x8<<2).
 
-- `lw.hex`: number 0xF is stored at 0xC. Load the number stored in 0xC in $8.
+- `lw.hex`: the number 0xF is stored in memory at 0xC. Load the number stored in 0xC in \$8.
 
-- `sw.hex`
+- `sw.hex`: the number 0xF is stored in memory at 0xC. Load the number stored in 0xC in \$8. Store \$8 register in memory at 0x12
 
-- `add.hex`
+- `add.hex`:
 
-- `beq.hex`
+- `beq.hex`:
 
 ## Instructions format
 
