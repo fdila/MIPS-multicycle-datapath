@@ -1,0 +1,12 @@
+//Put any number in memory at 0xC address
+//Put any number in memory at 0x10 address
+
+
+//Load in $0 the number stored at 0xC
+8C00000C
+
+//Load in $1 the number stored at 0x10
+8C210010
+
+//BEQ $0 $1 and branch to PC + 2 if true
+10010002
