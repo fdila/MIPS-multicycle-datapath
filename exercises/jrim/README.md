@@ -1,19 +1,21 @@
-# MIPS-multicycle-datapath
+# jrim
 
-MIPS multicycle datapath made in logisim evolution.
+## states
 
-Datapath and FSM are taken from "Computer Organization and Design: The Hardware/Software Interface, Mips Edition", 3rd edition.
+new state after 0001 -> 1100
 
-This datapath implements:
+## instruction format
 
-- R-Type instructions (ADD, AND, SUB, SLT)
+- op code 001001
 
-- Load Word
+- rt
 
-- Store Word
+- rs
 
-- Jump
+- imm
 
-- Branch Equal
+## jrim.hex
 
-- Exceptions for ADD overflow and unrecognized OP code
+jumps to \$0  + 0b0001000000000000
+
+001001 00000 00000 0001000000000000

@@ -1,19 +1,16 @@
-# MIPS-multicycle-datapath
+# jal
 
-MIPS multicycle datapath made in logisim evolution.
+## states
 
-Datapath and FSM are taken from "Computer Organization and Design: The Hardware/Software Interface, Mips Edition", 3rd edition.
+new state after 0001 -> 1100
+new state after 1100 -> 1101
 
-This datapath implements:
+## instruction format
 
-- R-Type instructions (ADD, AND, SUB, SLT)
+- op code = 000011
 
-- Load Word
+- target address
 
-- Store Word
+## jal.hex
 
-- Jump
-
-- Branch Equal
-
-- Exceptions for ADD overflow and unrecognized OP code
+jumps to 00000000000000000001111100 << 2 and save current PC in \$31

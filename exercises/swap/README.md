@@ -1,19 +1,30 @@
-# MIPS-multicycle-datapath
+# swap
 
-MIPS multicycle datapath made in logisim evolution.
+## states
 
-Datapath and FSM are taken from "Computer Organization and Design: The Hardware/Software Interface, Mips Edition", 3rd edition.
+new state after 0001 -> 1100
 
-This datapath implements:
+new state after 1100 ->1101
 
-- R-Type instructions (ADD, AND, SUB, SLT)
+## instruction format
 
-- Load Word
+- op 001001
 
-- Store Word
+- rs
 
-- Jump
+- rt
 
-- Branch Equal
+- rd
 
-- Exceptions for ADD overflow and unrecognized OP code
+- unused
+
+rs == rd
+
+## swap.hex
+
+load in \$8 the number in memory at 0xC 
+
+load in \$9 the number in memory at 0x10
+
+swap \$8 and \$9
+001001 01000 01001 01000 00000000000
