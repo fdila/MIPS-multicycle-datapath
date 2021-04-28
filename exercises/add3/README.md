@@ -1,29 +1,28 @@
-Istruzione che somma 3 registri e mette il contenuto in un quarto registro
+# add3
 
-add3 op (ipotetico) = 001010
+## states
 
-Formato istruzione:
+new state after 0001 -> 1100
+new state after 1100 -> 1101
+new state after 1101 -> 0111
+
+## instruction format
+
+op code = 001010
+
 001001 00000 00000 00000 000000 00000
-op     rs    rt    rd    ------ rx
+op          rs        rt          rd       ------        rx
 
-nuovo stato dopo 0001 -> 1100
-nuovo stato dopo 1100 -> 1101
-nuovo stato dopo 1101 -> 0111
+## add3.hex
 
-Somma $1, $2, $3 e salva in $4
-001001 00001 00010 00100 000000 00011
+//Load in $8 the number stored at 0x10
+8C080010
 
-//Put any number in memory at 0xC address
-//Put any number in memory at 0x10 address
+//Load in $9 the number stored at 0x14
+8C090014
 
-//Load in $1 the number stored at 0x10
-8C010010
+//Load in $10 the number stored at 0x18
+8C0A0018
 
-//Load in $2 the number stored at 0x14
-8C020014
-
-//Load in $3 the number stored at 0x14
-8C030014
-
-//Add3
-24222003
+//Add \$8, \$9, \$10 and store the result in \$11
+2509580A
