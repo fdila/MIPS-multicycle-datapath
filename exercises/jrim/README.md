@@ -1,10 +1,21 @@
-nuovo stato dopo 0001 -> 1100
+# jrim
 
-jrim op (ipotetico) = 001001
+## states
 
-//salta a $0 + 0b0001000000000000
+new state after 0001 -> 1100
+
+## instruction format
+
+- op code 001001
+
+- rt
+
+- rs
+
+- imm
+
+## jrim.hex
+
+jumps to \$0  + 0b0001000000000000
 
 001001 00000 00000 0001000000000000
-
-hex:
-24001000
