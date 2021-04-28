@@ -1,2 +1,0 @@
-//Add 0b1111111111111111 to $0 and save the result in $1
-2001FFFF
