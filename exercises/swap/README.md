@@ -1,27 +1,30 @@
-Istruzione che scambia il contenuto di due registri
+# swap
 
-swap op (ipotetico) = 001001
+## states
 
-Formato istruzione:
-001001 00000 00000 00000 00000000000
-op     rs    rt    rd    -----
+new state after 0001 -> 1100
 
-rs = rd
+new state after 1100 ->1101
 
-nuovo stato dopo 0001 -> 1100
-nuovo stato dopo 1100 -> 1101
+## instruction format
 
-Scambia il contenuto di $0 e $1
-001001 00000 00001 00000 00000000000
+- op 001001
 
-//Put any number in memory at 0xC address
-//Put any number in memory at 0x10 address
+- rs
 
-//Load in $0 the number stored at 0xC
-8C00000C
+- rt
 
-//Load in $1 the number stored at 0x10
-8C210010
+- rd
 
-//Swap $0 $1
-24010000
+- unused
+
+rs == rd
+
+## swap.hex
+
+load in \$8 the number in memory at 0xC 
+
+load in \$9 the number in memory at 0x10
+
+swap \$8 and \$9
+001001 01000 01001 01000 00000000000
