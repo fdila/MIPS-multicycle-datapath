@@ -1,11 +1,16 @@
-nuovo stato dopo 0001 -> 1100
-nuovo stato dopo 1100 -> 1101
+# jal
 
-jal op = 000011
+## states
 
-//jal 00000000000000000001111100
-000011 00000000000000000001111100
+new state after 0001 -> 1100
+new state after 1100 -> 1101
 
-//hex da caricare in memoria
-C00007C
+## instruction format
 
+- op code = 000011
+
+- target address
+
+## jal.hex
+
+jumps to 00000000000000000001111100 << 2 and save current PC in \$31
