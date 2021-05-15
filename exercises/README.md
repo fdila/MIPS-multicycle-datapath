@@ -50,4 +50,11 @@ Instruction structure:
 
 - 6 bit NOT USED [bit 10-5]
 
+## overflow exception
+2 different implementations of overflow exception
+(note: due to the current overflow detection in the ALU this works only for add operations)
+
+## load word not aligned exception
+simple implementation for load word with address not aligned in memory
+
 - 5 bit \$rx [bit 4-0]

@@ -16,7 +16,7 @@ This datapath implements:
 
 - Branch Equal
 
-- Exceptions for ADD overflow and unrecognized OP code
+NOTE: the current implementation only recognize overflow for ADD operations and could misbehave for SUB operations.
 
 Repository structure:
 
