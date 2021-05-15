@@ -544,9 +544,6 @@ end TCL_Generic;
       <a name="facing" val="west"/>
       <a name="size" val="30"/>
     </comp>
-    <comp lib="1" loc="(560,220)" name="OR Gate">
-      <a name="size" val="30"/>
-    </comp>
     <comp lib="1" loc="(560,560)" name="AND Gate">
       <a name="facing" val="west"/>
       <a name="size" val="30"/>
