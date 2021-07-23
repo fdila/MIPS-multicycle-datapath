@@ -1,6 +1,8 @@
 # MIPS-multicycle-datapath
 
-MIPS multicycle datapath made in logisim evolution for the "Computers' Architecture" course @ [Università degli studi di Milano-Bicocca](unimib.it).
+## WARNING: not currently under active development or mantained
+
+MIPS multicycle datapath made in logisim evolution for the "Computers' Architecture" course @ [Università degli studi di Milano-Bicocca](unimib.it), academic year 2020/2021.
 
 Datapath and FSM are taken from "Computer Organization and Design: The Hardware/Software Interface, Mips Edition", 3rd edition.
 
