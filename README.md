@@ -20,9 +20,9 @@ NOTE: the current implementation only recognize overflow for ADD operations and 
 
 Repository structure:
 
-- `slides`: here you can find the presentations used for the course, giving some hints on how to use this simulator (english slides are WIP).
+- `slides`: here you can find the presentations used for the course, giving some hints on how to use this simulator.
 
-- `truth-tables`: here you can find the truth tables used to generate the circuits (control unit and ALU control).
+- `truth-tables`: here you can find the truth tables used to generate the circuits.
 
 - `hex-instructions`: here you can find some examples to load in the RAM to see how the datapath works.
 
