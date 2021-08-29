@@ -114,7 +114,7 @@ end TCL_Generic;
       <a name="SocBusSelection" val=""/>
     </tool>
   </lib>
-  <main name="main"/>
+  <main name="Datapath"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -159,9 +159,9 @@ end TCL_Generic;
       <a name="appearance" val="logisim_evolution"/>
     </tool>
   </toolbar>
-  <circuit name="main">
+  <circuit name="Datapath">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="main"/>
+    <a name="circuit" val="Datapath"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
@@ -1412,13 +1412,43 @@ end TCL_Generic;
     <wire from="(680,40)" to="(680,110)"/>
   </circuit>
   <circuit name="RegisterFile">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="RegisterFile"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
+    <appear>
+      <circ-anchor facing="east" height="6" width="6" x="267" y="57"/>
+      <circ-port height="10" pin="1130,4510" width="10" x="265" y="55"/>
+      <circ-port height="10" pin="1520,4510" width="10" x="265" y="75"/>
+      <circ-port height="8" pin="160,4650" width="8" x="46" y="156"/>
+      <circ-port height="8" pin="1700,4320" width="8" x="46" y="136"/>
+      <circ-port height="8" pin="310,160" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="340,720" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="340,810" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="870,4320" width="8" x="46" y="116"/>
+      <polygon fill="none" points="61,155 61,165 71,160" stroke="#000000"/>
+      <rect fill="none" height="140" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <rect height="20" stroke="none" width="200" x="60" y="170"/>
+      <rect height="3" stroke="none" width="10" x="50" y="159"/>
+      <rect height="3" stroke="none" width="10" x="50" y="59"/>
+      <rect height="4" stroke="none" width="10" x="260" y="58"/>
+      <rect height="4" stroke="none" width="10" x="260" y="78"/>
+      <rect height="4" stroke="none" width="10" x="50" y="118"/>
+      <rect height="4" stroke="none" width="10" x="50" y="138"/>
+      <rect height="4" stroke="none" width="10" x="50" y="78"/>
+      <rect height="4" stroke="none" width="10" x="50" y="98"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="64">ReadData1</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="84">ReadData2</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="104">WriteData</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="124">ReadRegis..</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="144">ReadRegis..</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">WriteEnable</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">WriteRegi..</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="184">RegisterFile</text>
+    </appear>
     <comp lib="0" loc="(1130,4510)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -2380,6 +2410,7 @@ end TCL_Generic;
       <circ-port height="8" pin="360,280" width="8" x="46" y="56"/>
       <circ-port height="8" pin="360,740" width="8" x="46" y="116"/>
       <circ-port height="8" pin="580,700" width="8" x="46" y="76"/>
+      <polygon fill="none" points="61,134 61,145 72,140" stroke="#000000"/>
       <rect fill="none" height="120" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
       <rect height="20" stroke="none" width="200" x="60" y="150"/>
       <rect height="3" stroke="none" width="10" x="49" y="139"/>
@@ -2393,7 +2424,6 @@ end TCL_Generic;
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="121">MemWriteData</text>
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">MemAddr</text>
       <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="86">MemWrite</text>
-      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="66" y="143">CLK</text>
       <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="164">Memory</text>
     </appear>
     <comp lib="0" loc="(1060,760)" name="Pin">
@@ -2675,13 +2705,76 @@ end TCL_Generic;
     <wire from="(340,120)" to="(390,120)"/>
   </circuit>
   <circuit name="ControlUnit">
-    <a name="appearance" val="logisim_evolution"/>
+    <a name="appearance" val="custom"/>
     <a name="circuit" val="ControlUnit"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <a name="clabel" val=""/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="clabelup" val="east"/>
+    <appear>
+      <circ-anchor facing="east" height="6" width="6" x="267" y="57"/>
+      <circ-port height="10" pin="1140,220" width="10" x="265" y="55"/>
+      <circ-port height="10" pin="1140,300" width="10" x="265" y="135"/>
+      <circ-port height="10" pin="1140,380" width="10" x="265" y="215"/>
+      <circ-port height="10" pin="1140,460" width="10" x="265" y="295"/>
+      <circ-port height="10" pin="1280,320" width="10" x="265" y="155"/>
+      <circ-port height="10" pin="1280,400" width="10" x="265" y="235"/>
+      <circ-port height="10" pin="1280,480" width="10" x="265" y="315"/>
+      <circ-port height="10" pin="1320,240" width="10" x="265" y="75"/>
+      <circ-port height="10" pin="1410,420" width="10" x="265" y="255"/>
+      <circ-port height="10" pin="1430,500" width="10" x="265" y="335"/>
+      <circ-port height="10" pin="1440,340" width="10" x="265" y="175"/>
+      <circ-port height="10" pin="1450,260" width="10" x="265" y="95"/>
+      <circ-port height="10" pin="1550,280" width="10" x="265" y="115"/>
+      <circ-port height="10" pin="1550,360" width="10" x="265" y="195"/>
+      <circ-port height="10" pin="1560,440" width="10" x="265" y="275"/>
+      <circ-port height="10" pin="1560,520" width="10" x="265" y="355"/>
+      <circ-port height="8" pin="150,260" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="260,240" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="710,260" width="8" x="46" y="96"/>
+      <polygon fill="none" points="61,95 61,105 71,100" stroke="#000000"/>
+      <rect fill="none" height="340" stroke="#000000" stroke-width="2" width="200" x="60" y="50"/>
+      <rect height="20" stroke="none" width="200" x="60" y="370"/>
+      <rect height="3" stroke="none" width="10" x="260" y="119"/>
+      <rect height="3" stroke="none" width="10" x="260" y="139"/>
+      <rect height="3" stroke="none" width="10" x="260" y="159"/>
+      <rect height="3" stroke="none" width="10" x="260" y="179"/>
+      <rect height="3" stroke="none" width="10" x="260" y="199"/>
+      <rect height="3" stroke="none" width="10" x="260" y="219"/>
+      <rect height="3" stroke="none" width="10" x="260" y="239"/>
+      <rect height="3" stroke="none" width="10" x="260" y="299"/>
+      <rect height="3" stroke="none" width="10" x="260" y="339"/>
+      <rect height="3" stroke="none" width="10" x="260" y="359"/>
+      <rect height="3" stroke="none" width="10" x="260" y="59"/>
+      <rect height="3" stroke="none" width="10" x="260" y="79"/>
+      <rect height="3" stroke="none" width="10" x="260" y="99"/>
+      <rect height="3" stroke="none" width="10" x="50" y="79"/>
+      <rect height="3" stroke="none" width="10" x="50" y="99"/>
+      <rect height="4" stroke="none" width="10" x="260" y="258"/>
+      <rect height="4" stroke="none" width="10" x="260" y="278"/>
+      <rect height="4" stroke="none" width="10" x="260" y="318"/>
+      <rect height="4" stroke="none" width="10" x="50" y="58"/>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="104">IorD</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="124">MemRead</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="144">MemWrite</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="164">MemtoReg</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="184">IRWrite</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="204">CauseWrite</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="224">IntCause</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="244">EPCWrite</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="264">PCSource</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="284">ALUOp</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="304">ALUSrcA</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="324">ALUSrcB</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="344">RegWrite</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="364">RegDst</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="64">PCWriteCond</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="end" x="255" y="84">PCWrite</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="64">Op</text>
+      <text dominant-baseline="alphabetic" fill="#404040" font-family="Courier 10 Pitch" font-size="12" text-anchor="start" x="65" y="84">Overflow</text>
+      <text dominant-baseline="alphabetic" fill="#ffffff" font-family="Courier 10 Pitch" font-size="14" font-weight="bold" text-anchor="middle" x="160" y="384">ControlUnit</text>
+    </appear>
     <comp lib="0" loc="(1140,220)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
