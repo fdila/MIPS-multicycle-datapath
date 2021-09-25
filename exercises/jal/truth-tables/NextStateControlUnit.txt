@@ -1,0 +1,53 @@
+# Truth table
+# Exported on Tue Aug 31 22:25:55 CEST 2021
+
+# Hints and Notes on Formatting:
+# * You can edit this file then import it back into Logisim!
+# * Anything after a '#' is a comment and will be ignored.
+# * Blank lines and separator lines (e.g., ~~~~~~) are ignored.
+# * Keep column names simple (no spaces, punctuation, etc.)
+# * 'Name[N..0]' indicates an N+1 bit variable, whereas
+#   'Name' by itself indicates a 1-bit variable.
+# * You can use 'x' or '-' to indicate "don't care" for both
+#   input and output bits.
+# * You can use binary (e.g., '10100011xxxx') notation or
+#   or hex (e.g., 'C3x'). Logisim will figure out which is which.
+
+CurrentState[3..0] Op[5..0] Overflow | NextState[3..0]
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+       0000         ------     -     |      0001      
+       0001         000000     -     |      0110      
+       0001         000001     -     |      1010      
+       0001         000010     -     |      1001      
+       0001         000011     -     |      1100      
+       0001         000100     -     |      1000      
+       0001         0001-1     -     |      1010      
+       0001         -00110     -     |      1010      
+       0001         -01--0     -     |      1010      
+       0001         001--1     -     |      1010      
+       0001         -1----     -     |      1010      
+       0001         100-0-     -     |      1010      
+       0001         100010     -     |      1010      
+       0001         10-011     -     |      0010      
+       0001         10-111     -     |      1010      
+       0001         101-01     -     |      1010      
+       0010         0-----     -     |      ----      
+       0010         10-00-     -     |      ----      
+       0010         10-010     -     |      ----      
+       0010         100011     -     |      0011      
+       0010         10-1--     -     |      ----      
+       0010         101011     -     |      0101      
+       0010         11----     -     |      ----      
+       0011         ------     -     |      0100      
+       0100         ------     -     |      0000      
+       0101         ------     -     |      0000      
+       0110         ------     -     |      0111      
+       0111         ------     0     |      0000      
+       0111         ------     1     |      1011      
+       1000         ------     -     |      0000      
+       1001         ------     -     |      0000      
+       1010         ------     -     |      0000      
+       1011         ------     -     |      0000      
+       1100         ------     -     |      1101      
+       1101         ------     -     |      0000      
+       111-         ------     -     |      ----      
