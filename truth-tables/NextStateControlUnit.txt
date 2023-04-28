@@ -1,5 +1,5 @@
 # Truth table
-# Exported on Sat Aug 28 13:07:08 CEST 2021
+# Exported on Fri Apr 28 13:49:30 CEST 2023
 
 # Hints and Notes on Formatting:
 # * You can edit this file then import it back into Logisim!
