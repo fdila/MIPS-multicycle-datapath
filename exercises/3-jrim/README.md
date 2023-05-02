@@ -1,9 +1,5 @@
 # jrim
 
-## states
-
-new state after 0001 -> 1100
-
 ## instruction format
 
 - op code 001001
