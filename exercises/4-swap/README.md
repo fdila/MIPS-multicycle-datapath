@@ -1,11 +1,5 @@
 # swap
 
-## states
-
-new state after 0001 -> 1100
-
-new state after 1100 ->1101
-
 ## instruction format
 
 - op 001001
