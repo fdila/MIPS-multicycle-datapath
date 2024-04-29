@@ -1,4 +1,4 @@
-## Hex files in this folder
+# Hex files
 
 - `j.hex`: Jumps to 0x20 (= 0x8<<2).
 
@@ -8,7 +8,7 @@
 
 - `add.hex`: The number 0xF is stored in memory at 0xC. The number 0x4 is stored in memory at 0x10. Load the two numbers from memory in \$8 and \$9. Add the two registers and store the result in \$10.
 
-- `beq.hex`: Check if \$8 is equal to \$0. If true jump to PC+(0x8<<2).
+- `beq.hex`: Check if \$8 is equal to \$0. If true jump to PC(+4, as it is incremented in the fetch phase)+(0x8<<2).
 
 ## Instructions format
 
